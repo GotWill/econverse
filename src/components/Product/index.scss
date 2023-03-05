@@ -1,0 +1,84 @@
+$pink: #F71963;
+$gray: #9F9F9F;
+$white: #FFFFFF;
+$gray1: #3B3B3B;
+$gray2: #3F3F40;
+
+.product {
+    width: 270px;
+    height: 470px;
+    box-shadow: 0px 3px 19px rgba(0, 0, 0, 0.22);
+    border-radius: 10px;
+    margin-bottom: 20px;
+
+    .item {
+      width: 247px;
+      margin: 0 auto;
+      height: 351px;
+
+      .container_img {
+        margin-top: 10px;
+        text-align: center;
+
+        img {
+          width: 100%;
+          margin-top: 32px;
+        }
+      }
+
+      .description p:first-child {
+        font-weight: 300;
+        color: $gray2;
+        font-size: 15px;
+        margin-bottom: 10px;
+
+      }
+
+      .description .price {
+        text-decoration-line: line-through;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: #808080;
+      }
+
+      .description h2 {
+        font-weight: 700;
+        font-size: 20px;
+        color: $gray2;
+      }
+
+      .description .installments {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 18px;
+        color: $gray2;
+      }
+
+      .description .free {
+        color: $pink;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 18px;
+        margin-top: 7px;
+
+      }
+
+      .description button {
+        margin-top: 12px;
+        width: 100%;
+        border-radius: 4px;
+        background: $pink;
+        border: none;
+        height: 44px;
+        color: $white;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 21px;
+        text-align: center;
+        cursor: pointer;
+      }
+    }
+
+
+  }
