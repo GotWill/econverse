@@ -1,9 +1,8 @@
-$pink: #F71963;
-$gray: #9F9F9F;
-$white: #FFFFFF;
+@import '../../variables.scss';
 
 
-header {
+
+.header {
     max-width: 1280px;
     margin: 0 auto;
 
@@ -13,8 +12,6 @@ header {
         gap: 40px;
         padding: 16px 0;
         border-bottom: 1px solid #F0F0F0;
-
-
 
         .flex {
             display: flex;
@@ -34,6 +31,11 @@ header {
             font-weight: 600;
             font-size: 12px;
             line-height: 18px;
+        }
+
+        @media (max-width: 768px) {
+            flex-direction: column;
+            padding: 16px;
         }
     }
 
@@ -86,6 +88,23 @@ header {
                 cursor: pointer;
             }
         }
+
+        @media (max-width: 768px) {
+            flex-direction: column;
+           row-gap: 20px;
+            .input{
+                width: 100%;
+                padding: 0 13px;
+              
+
+                input{
+                    width: 100%;
+                }
+            }
+
+            
+        }
+        
     }
 
     .header_bottom {
@@ -111,7 +130,18 @@ header {
                 text-decoration: none;
                 color: $gray;
             }
+
+           
         }
+
+        @media (max-width: 767px) {
+          .links{
+            display: flex;
+            flex-direction: column;
+            padding: 16px;
+          }
+        }
+
     }
 
 
@@ -157,6 +187,13 @@ header {
         }
     }
 
+    @media(max-width: 768px){
+        top: 80%;
+        h2, h3{
+            font-size: 25px;
+        }
+    }
+
 
 }
 
@@ -168,5 +205,7 @@ header {
         url('../../assets/banner.png') center center / cover no-repeat;
     mix-blend-mode: normal;
     opacity: 0.8;
+
+
 
 }

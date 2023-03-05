@@ -16,15 +16,10 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import Logo from './assets/logo.png'
 import { Footer } from "./components/Footer"
+import "react-alice-carousel/lib/scss/alice-carousel.scss";
+import { ProductType } from "./@types/Product"
 
 
-
-export type ProductType = {
-  productName: string;
-  descriptionShort: string;
-  photo: string;
-  price: number;
-}
 
 function App() {
 
@@ -39,7 +34,6 @@ function App() {
   useEffect(() => {
     getProducts()
   }, [])
-
 
 
   return (
@@ -94,7 +88,6 @@ function App() {
         <section className="section_category">
           <div className="header">
             <h1>Produtos relacionados</h1>
-            
           </div>
 
           <nav>
@@ -122,14 +115,21 @@ function App() {
         <section className="products_list">
 
           <Swiper
-            navigation={false}
+            breakpoints={{
+              576: {
+                slidesPerView: 1,
+              },
+              768: {
+                slidesPerView: 2,
+              },
+              1200: {
+                slidesPerView: 4,
+              }
+            }}
+            navigation={true}
             modules={[Navigation, Pagination, Scrollbar, A11y]}
-            spaceBetween={50}
-            slidesPerView={4}
             pagination={{ clickable: true }}
             scrollbar={{ draggable: true }}
-
-
           >
             <div className="container_products">
               {products.map((product, index) => (
@@ -162,14 +162,21 @@ function App() {
             <p>Ver todos</p>
           </div>
           <Swiper
-            navigation={false}
+            breakpoints={{
+              576: {
+                slidesPerView: 1,
+              },
+              768: {
+                slidesPerView: 2,
+              },
+              1200: {
+                slidesPerView: 4,
+              }
+            }}
+            navigation={true}
             modules={[Navigation, Pagination, Scrollbar, A11y]}
-            spaceBetween={50}
-            slidesPerView={4}
             pagination={{ clickable: true }}
             scrollbar={{ draggable: true }}
-
-
           >
             <div className="container_products">
               {products.map((product, index) => (
@@ -177,7 +184,6 @@ function App() {
               ))}
             </div>
           </Swiper>
-
           <div className="photos">
             <div className="image-2">
               <div className="info_area">
@@ -197,31 +203,63 @@ function App() {
         </section>
 
         <section className="brands">
-                <h2>Navegue por marcas</h2>
-                <div className="container_circle">
-                   <div className="circle">
-                      <img src={Logo} alt="" />
-                      <h2>VTEX</h2>
-                   </div>
-                   <div className="circle">
-                      <img src={Logo} alt="" />
-                      <h2>VTEX</h2>
-                   </div>
-                   <div className="circle">
-                      <img src={Logo} alt="" />
-                      <h2>VTEX</h2>
-                   </div>
-                   <div className="circle">
-                      <img src={Logo} alt="" />
-                      <h2>VTEX</h2>
-                   </div>
-                   <div className="circle">
-                      <img src={Logo} alt="" />
-                      <h2>VTEX</h2>
-                   </div>
-                </div>
-        </section>
+          <h2>Navegue por marcas</h2>
+          <div className="container_circle">
+            <Swiper
+              breakpoints={{
+                576: {
+                  slidesPerView: 1,
+                },
+                768: {
+                  slidesPerView: 2,
+                },
+                1200: {
+                  slidesPerView: 5,
+                }
+              }}
+              navigation={true}
+              modules={[Navigation, Pagination, Scrollbar, A11y]}
+              pagination={{ clickable: true }}
+              scrollbar={{ draggable: true }}>
 
+              <SwiperSlide> <div className="circle">
+                <img src={Logo} />
+                <h2>VTEX</h2>
+              </div>
+              </SwiperSlide>
+              <SwiperSlide> <div className="circle">
+                <img src={Logo} />
+                <h2>VTEX</h2>
+              </div>
+              </SwiperSlide>
+              <SwiperSlide> <div className="circle">
+                <img src={Logo} />
+                <h2>VTEX</h2>
+              </div>
+              </SwiperSlide>
+              <SwiperSlide> <div className="circle">
+                <img src={Logo} />
+                <h2>VTEX</h2>
+              </div>
+              </SwiperSlide>
+              <SwiperSlide> <div className="circle">
+                <img src={Logo} />
+                <h2>VTEX</h2>
+              </div>
+              </SwiperSlide>
+              <SwiperSlide> <div className="circle">
+                <img src={Logo} />
+                <h2>VTEX</h2>
+              </div>
+              </SwiperSlide>
+              <SwiperSlide> <div className="circle">
+                <img src={Logo} />
+                <h2>VTEX</h2>
+              </div>
+              </SwiperSlide>
+            </Swiper>
+          </div>
+        </section>
 
         <section className="products_list">
           <div className="header">
@@ -229,14 +267,21 @@ function App() {
             <p>Ver todos</p>
           </div>
           <Swiper
-            navigation={false}
+            breakpoints={{
+              576: {
+                slidesPerView: 1,
+              },
+              768: {
+                slidesPerView: 2,
+              },
+              1200: {
+                slidesPerView: 4,
+              }
+            }}
+            navigation={true}
             modules={[Navigation, Pagination, Scrollbar, A11y]}
-            spaceBetween={50}
-            slidesPerView={4}
             pagination={{ clickable: true }}
             scrollbar={{ draggable: true }}
-
-
           >
             <div className="container_products">
               {products.map((product, index) => (
@@ -244,14 +289,10 @@ function App() {
               ))}
             </div>
           </Swiper>
-
-          
         </section>
 
-        
       </main>
-
-      <Footer/>
+      <Footer />
     </div>
   )
 }

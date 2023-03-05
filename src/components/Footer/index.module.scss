@@ -1,0 +1,194 @@
+@import '../../variables.scss';
+
+
+.footer {
+    padding: 59px 96px;
+    margin-top: 185px;
+    background: $black;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+
+    .container_one {
+        h3 {
+            color: $white;
+            font-weight: 700;
+            font-size: 13px;
+            line-height: 20px;
+            margin-bottom: 24px;
+        }
+
+        ul {
+            list-style: none;
+
+            li {
+                color: $white;
+                font-weight: 300;
+                font-size: 12px;
+                line-height: 32px;
+            }
+        }
+
+        .icons {
+            margin-top: 60px;
+            display: flex;
+            gap: 30px;
+
+        }
+    }
+
+    .container_two {
+        h3 {
+            color: $white;
+            font-weight: 700;
+            font-size: 13px;
+            line-height: 20px;
+            margin-bottom: 24px;
+        }
+
+        ul {
+            list-style: none;
+
+            li {
+                color: $white;
+                font-weight: 300;
+                font-size: 12px;
+                line-height: 32px;
+            }
+        }
+    }
+
+    .container_three {
+        margin-right: 90px;
+        h3 {
+            color: $white;
+            font-weight: 700;
+            font-size: 13px;
+            line-height: 20px;
+            margin-bottom: 24px;
+        }
+
+        .payments {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 40px;
+            margin-bottom: 15px;
+
+
+        }
+    }
+
+    .container_four {
+        .square {
+            background: $white;
+            height: 260px;
+            width: 380px;
+            border-radius: 10px;
+            padding: 40px 29px 40px 34px;
+
+            p {
+                font-weight: 300;
+                font-size: 18px;
+                line-height: 26px;
+                color: #3F3F40;
+            }
+
+            h2 {
+                font-size: 21px;
+                font-weight: 700;
+                line-height: 26px;
+                letter-spacing: 0em;
+                text-align: left;
+                margin-bottom: 15px;
+
+            }
+
+            .info_footer {
+                text-align: center;
+
+                span {
+                    font-weight: 300;
+                    font-size: 12px;
+                    line-height: 19px;
+                    color: #3F3F40;
+                }
+            }
+
+            form {
+                display: flex;
+                gap: 9px;
+                margin-top: 31px;
+
+                input {
+                    outline: none;
+                    border: 1px solid #2A2A2A;
+                    border-radius: 4px;
+                    padding: 13px 0 12px 25px;
+                    width: 230px;
+                }
+
+                button {
+                    background: #F71963;
+                    border: none;
+                    height: 45px;
+                    width: 62px;
+                    color: white;
+                    border-radius: 4px;
+
+                }
+
+            }
+
+        }
+    }
+
+    @media (max-width: 767px) {
+
+        display: flex;
+        flex-direction: column;
+        padding: 59px 10px;
+
+        h3 {
+            margin-top: 20px;
+        }
+
+        .container_four {
+            .square {
+                margin-top: 30px;
+                width: 100%;
+            }
+        }
+    }
+}
+
+.copy {
+    background: #2A2A2A;
+    padding: 22px 96px;
+    border-top: 1px solid white;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    p {
+        color: white;
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 13px;
+
+    }
+
+    .img_copy {
+        display: flex;
+        gap: 32px;
+    }
+
+    @media (max-width: 900px) {
+        padding: 22px 10px;
+
+        .img_copy {
+            margin-top: 40px;
+        }
+    }
+}

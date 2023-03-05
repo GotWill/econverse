@@ -1,14 +1,14 @@
-import { ProductType } from "../../App"
+import { ProductType } from '../../@types/Product'
 import './index.scss'
 import { formatValue } from "../../helpers"
+import * as Dialog from '@radix-ui/react-dialog'
+import { Modal } from "../Modal"
 
-type Props  ={
-    item: ProductType
+type Props = {
+    item: ProductType;
 }
 
-
-
-export function Product({item}: Props) {
+export function Product({ item }: Props) {
     return (
         <div className="product">
             <div className="item">
@@ -22,8 +22,12 @@ export function Product({item}: Props) {
                     <p className="installments">ou 12x de R$ {formatValue(item.price / 12)} sem juros</p>
                     <p className="free">Frete grátis</p>
 
-                    <button>COMPRAR</button>
-
+                    <Dialog.Root>
+                        <Dialog.DialogTrigger asChild>
+                            <button> COMPRAR </button>
+                        </Dialog.DialogTrigger>
+                        <Modal item={item} />
+                    </Dialog.Root>
                 </div>
             </div>
         </div>
