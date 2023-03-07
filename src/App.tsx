@@ -16,7 +16,6 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import Logo from './assets/logo.png'
 import { Footer } from "./components/Footer"
-import "react-alice-carousel/lib/scss/alice-carousel.scss";
 import { ProductType } from "./@types/Product"
 
 
