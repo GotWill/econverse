@@ -9,11 +9,23 @@ const config: Config = {
   theme: {
     extend: {
       backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'overlayBanner': 'linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, #000 85.04%)',
+        
       },
+      
     },
+    colors: {
+      'primary':  '#F71963',
+      'secondary': '#9F9F9F',
+      'categorys': '0px 8px 16px 0px rgba(57, 48, 19, 0.12)'
+    },
+    backgroundColor: {
+       'primary':  '#F71963',
+       'secondary': '#9F9F9F',
+       'input': '#F6F5F2',
+      
+    },
+    
   },
   plugins: [],
 }
