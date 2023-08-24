@@ -22,7 +22,7 @@ export function Modal({item} : ModalProps) {
     return (
         <AlertDialog.Root>
             <AlertDialog.Trigger asChild>
-                <button className="mt-3 mb-4 bg-primary text-[#FFF] text-center w-full pt-[14.08px] pb-[11.04px] rounded font-bold uppercase">Comprar</button>
+                <button className="mt-3 cursor-pointer mb-4 bg-primary text-[#FFF] text-center w-full pt-[14.08px] pb-[11.04px] rounded font-bold uppercase">Comprar</button>
             </AlertDialog.Trigger>
             <AlertDialog.Portal>
                 <AlertDialog.Overlay className="AlertDialogOverlay" />
