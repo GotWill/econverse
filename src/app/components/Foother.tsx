@@ -119,7 +119,7 @@ export function Footer() {
                         Excepteur sint occaecat cudatat non ent, sunt in culpa qui officia lorem ipsum
                     </p>
 
-                    <form className="mt-8 pl-7 md:pl-8 pr-5 flex gap-2">
+                    <form className="mt-8 pl-7 md:pl-8 pr-5 flex flex-col md:flex-row gap-2">
                         <input
                             type="text"
                             placeholder="Seu e-mail"
