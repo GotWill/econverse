@@ -33,7 +33,7 @@ export function Modal({item} : ModalProps) {
                         </div>
                     </AlertDialog.Cancel>
 
-                    <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
+                    <div className="container mx-auto flex flex-col md:flex-row justify-around items-center">
                         <Image width={247} height={228} src={item.photo} alt="" />
 
                         <div className='flex flex-col items-start'>
