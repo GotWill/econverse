@@ -137,7 +137,7 @@ export function Header() {
             </div>
 
 
-            <div className="flex justify-between items-center p-2 md:hidden">
+            <div className="flex justify-between items-center p-4 md:hidden">
                <Image src={Logo} alt="" />
 
                <button className="bg-primary rounded-full p-2">
