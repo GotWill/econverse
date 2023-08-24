@@ -32,7 +32,7 @@ export function ListProducts() {
     <section className="max-w-[1280px] mx-auto pt-10 pb-10">
       <Title title="Produtos relacionados" />
 
-      <div className="mt-1 px-2 md:px-0 flex flex-col md:flex-row justify-center items-center">
+      <div className="mt-1 px-4 md:px-0 flex flex-col md:flex-row justify-center items-center">
         <div className="w-full md:w-auto border border-[#BDBDBD] py-3 px-14 flex-1 text-center">
           <strong className="text-primary text-base font-bold uppercase">celular</strong>
         </div>

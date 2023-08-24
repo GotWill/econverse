@@ -1,4 +1,4 @@
-import { Search, ShieldCheck, ShoppingCart, Truck } from "lucide-react";
+import { MenuSquare, Search, ShieldCheck, ShoppingCart, Truck } from "lucide-react";
 import Logo from '../assets/img/logo/1.png'
 import Image from "next/image";
 
@@ -7,7 +7,7 @@ export function Header() {
         <header className="max-w-[1280px] mx-auto">
 
 
-            <div className="max-w-fit mx-auto items-baseline flex flex-col md:flex-row justify-center md:items-center gap-2 md:gap-[119px] p-2" style={{ borderBottom: '1px solid #9F9F9F' }}>
+            <div className="hidden md:flex  max-w-fit mx-auto items-baseline  flex-col md:flex-row justify-center md:items-center gap-2 md:gap-[119px] p-2" style={{ borderBottom: '1px solid #9F9F9F' }}>
                 <div className="flex items-center gap-2">
                     <ShieldCheck width={20} height={20} className="text-secondary" />
                     <span className="text-secondary text-sm font-medium">Compra <strong className="text-primary">100% segura</strong></span>
@@ -23,7 +23,7 @@ export function Header() {
                 </div>
             </div>
 
-            <div className="flex justify-around items-center py-3 hidden">
+            <div className="hidden md:flex justify-around items-center py-3 ">
 
                 <Image src={Logo} alt="" />
 
@@ -91,7 +91,7 @@ export function Header() {
 
 
 
-            <div className="flex flex-col md:flex-row justify-center items-center gap-3 md:gap-24 shadow shadow-[0px 8px 16px 0px rgba(57, 48, 19, 0.12)] py-3">
+            <div className="hidden md:flex   flex-col md:flex-row justify-center items-center gap-3 md:gap-24 shadow shadow-[0px 8px 16px 0px rgba(57, 48, 19, 0.12)] py-3">
                 <span className="text-secondary font-medium text-xs uppercase w-full shadow shadow-[0px 8px 16px 0px rgba(57, 48, 19, 0.12)] md:w-auto md:shadow-none p-2 md:p-0 text-center">
                     Todas Categorias
                 </span>
@@ -137,6 +137,13 @@ export function Header() {
             </div>
 
 
+            <div className="flex justify-between items-center p-2 md:hidden">
+               <Image src={Logo} alt="" />
+
+               <button className="bg-primary rounded-full p-2">
+                 <MenuSquare width={20} height={20} color="#FFF" />
+               </button>
+            </div>
 
         </header>
     )
