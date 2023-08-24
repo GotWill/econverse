@@ -109,7 +109,7 @@ export function Footer() {
                     </div>
                 </div>
 
-                <div className="bg-input  w-full  md:w-[380px] h-[260px] rounded-xl">
+                <div className="bg-input  w-full  md:w-[380px] md:h-[260px] rounded-xl">
                     <div className="pt-10 pl-7 pr-[50px]">
                         <span className="text-[#3F3F40] font-light text-[15px] uppercase leading-6">Cadastre-se e Receba nossas</span>
                         <h3 className="text-[#3F3F40] font-bold text-[17px] md:text-[19px] uppercase leading-6">novidades e promoções</h3>
@@ -127,7 +127,7 @@ export function Footer() {
                             required
                         />
 
-                        <button type="submit" className="bg-primary w-[62px] text-[#FFF] rounded h-[45px]">OK</button>
+                        <button type="submit" className="bg-primary w-full mb-4 md:mb-0 md:w-[62px] text-[#FFF] rounded h-[45px]">OK</button>
                     </form>
                 </div>
             </div>
